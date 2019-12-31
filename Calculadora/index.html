@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora</title>
+    <script type="text/JavaScript" src="javasp.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>	
+ <!--Cuerpo de la calculadora -->
+ 	<div class="cuerpoCalculadora">
+ <!--Pantalla de la calculadora-->
+  		<div class="pantalla" id="pantalla" >
+  			<div class="procesoOperacion" id="procesoOperacion"></div>
+  			<div class="operacion" id="numeroOperando"></div>
+  		</div>
+ <!--Teclas la calculadora-->	
+ 		<div class="teclas">
+ <!--Filas de las teclas-->	
+ 		 <!--Primera Fila-->	
+ 			<div class="filas">	
+ 				<!--Primera Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 1-->
+ 					<div class="especiales" onclick="atras()"> <h2> <=</h2> </div>
+ 				</div>
+  				<!--segunda Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 2-->
+ 					<div class="especiales" id="CE" onclick="borrar()"> <h2>C</h2> </div>
+ 				</div>
+  				<!--tercera Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 3-->
+ 					<div class="especiales" onclick='marcar("(")'> <h2>(</h2></div> 
+ 				</div>
+  				<!--cuarta Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 4-->
+ 					<div class="especiales" onclick='marcar(")")'> <h2>)</h2> </div> 
+ 				</div>
+  				<!--Quinta Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 5-->
+ 					<div class="especiales" onclick="operacionEspecial('√')"> <h2>√</h2> </div> 
+ 				</div>
+
+ 			</div><!--Fin de la Primera Fila-->
+ 		 <!--Segunda Fila-->	
+ 			<div class="filas">
+ 				<!--Primera Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 6-->
+ 					<div class="numero" onclick='marcar("7")'> <h2>7</h2> </div> 				
+ 				</div>
+  				<!--segunda Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 7-->
+ 					<div class="numero"onclick='marcar("8")'> <h2>8</h2> </div> 					
+ 				</div>
+  				<!--tercera Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 8-->
+ 					<div class="numero" onclick='marcar("9")'> <h2>9</h2> </div> 					
+ 				</div>
+  				<!--cuarta Columna-->
+ 				<div class="columna">
+  					<!--Tecla 9-->
+ 					<div class="especiales" onclick="marcar('/')"> <h2>/</h2> </div>					
+ 				</div>
+  				<!--Quinta Columna-->
+ 				<div class="columna">
+  					<!--Tecla 10-->
+ 					<div class="especiales" onclick="operacionEspecial('%')"> <h2>%</h2> </div>					
+ 				</div> 				 				
+ 			</div> <!-- Fin de laSegunda Fila-->
+ 		<!--Tercera Fila-->	
+  			<div class="filas">
+ 				<!--Primera Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 11-->
+ 					<div class="numero" onclick='marcar("4")'> <h2>4</h2> </div>
+ 				</div>
+  				<!--segunda Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 12-->
+ 					<div class="numero" onclick='marcar("5")'> <h2>5</h2> </div> 					
+ 				</div>
+  				<!--tercera Columna-->
+ 				<div class="columna">
+  					<!--Tecla 13-->
+ 					<div class="numero" onclick='marcar("6")'> <h2>6</h2> </div>					
+ 				</div>
+  				<!--cuarta Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 14-->
+ 					<div class="especiales" onclick="marcar('*')"> <h2>*</h2> </div> 					
+ 				</div>
+  				<!--Quinta Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 15-->
+ 					<div class="especiales" onclick="operacionEspecial('1/x')"> <h2>1/x</h2> </div> 					
+ 				</div>
+ 			</div> <!--Fin de la Tercera Fila-->	
+ 		 <!--Cuarta Fila-->		
+ 			<div class="filas">
+ 				<!--Primera Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 16-->
+ 					<div class="numero" onclick='marcar("1")'> <h2>1</h2> </div> 					
+ 				</div>
+  				<!--segunda Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 17-->
+ 					<div class="numero" onclick='marcar("2")'> <h2>2</h2> </div> 					
+ 				</div>
+  				<!--tercera Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 18-->
+ 					<div class="numero" onclick='marcar("3")'> <h2>3</h2> </div> 					
+ 				</div>
+  				<!--cuarta Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 19-->
+ 					<div class="especiales" onclick="marcar('-')"> <h2>-</h2> </div> 					
+ 				</div>
+  				<!--Quinta Columna-->
+ 				<div class="columna">
+ 					<!--Tecla 20-->
+ 					<div class="espacioigual" onclick="igual()"> <h2></h2> </div> 					
+ 				</div>
+ 			</div> <!--Fin de la Cuarta Fila-->	
+ 		 <!--Quinta Fila-->		
+ 			<div class="filas">
+ 				<!--Primera Columna-->
+ 				<div class="columna">
+  					<!--Tecla 21-->
+ 					<div class="espaciocero" onclick='marcar("0")'> <h2></h2> </div>				
+ 				</div>
+  				<!--segunda Columna-->
+ 				<div class="columna">
+  					<!--Tecla 22-->
+ 					<div class="cero" onclick='marcar("0")'> <h2>0</h2> </div>					
+ 				</div>
+  				<!--tercera Columna-->
+ 				<div class="columna">
+  					<!--Tecla 23-->
+ 					<div class="especiales" onclick='marcar(".")'> <h2>,</h2> </div>				
+ 				</div>
+  				<!--cuarta Columna-->
+ 				<div class="columna">
+  					<!--Tecla 24-->
+ 					<div class="especiales" id="sumar" onclick="marcar('+')"> <h2>+</h2> </div>					
+ 				</div>
+  				<!--Quinta Columna-->
+ 				<div class="columna">
+  					<!--Tecla 25-->
+ 					<div class="igual" onclick="igual()"> <h2>=</h2> </div>					
+ 				</div>
+ 			</div> <!--Fin de la Quinta Fila-->	
+ 		</div>  <!--Fin de la clase teclas-->	
+ 	</div> <!--Fin de la clase cuerpoCalculadora-->	
+
+</body> 
+
+</html>
